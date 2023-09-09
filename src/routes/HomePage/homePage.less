@@ -1,0 +1,135 @@
+@import '../../utils/utils.less';
+
+@bg: #f0f2f5;
+@cardBackground: #fff;
+@achievementWidth: 340px;
+
+.wrapper {
+  background-color: @bg;
+  padding: 10px 15px 0 15px;
+  font-size: 14px;
+  min-width: 800px;
+}
+
+.base-row {
+  background-color: @cardBackground;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.row {
+  .base-row;
+  & > div {
+    width: 50%;
+
+    &:first-child {
+      flex-grow: 1;
+    }
+    &:nth-child(2) {
+      width: 1px;
+      background-color: #cccccc;
+      padding: 5px 0;
+    }
+    &:nth-child(3) {
+      flex-grow: 1;
+    }
+  }
+}
+
+.rowContainer {
+  & > span {
+    display: block;
+    margin: 10px 0 0 20px;
+  }
+  & > div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.mainShowcase {
+  margin: 10px 10px 10px 15px;
+  & > div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 7px;
+
+    & > img {
+      margin: 5px;
+    }
+  }
+}
+
+.appShowcase {
+  margin: 10px 10px 10px 20px;
+  & > div {
+    text-align: center;
+    width: 120px;
+    text-align: left;
+
+    img {
+      margin-top: 6px;
+      margin-right: 12px;
+      border-radius: 10px;
+      float: left;
+    }
+  }
+}
+
+.row2 {
+  .base-row;
+  margin-top: 20px;
+  background-color: @bg;
+
+  & > div {
+    &:first-child {
+      width: calc(~'100% - @{achievementWidth}');
+
+      & > div {
+        background-color: @cardBackground;
+        &:first-child {
+        }
+
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: @cardBackground;
+      width: @achievementWidth;
+      margin-left: 20px;
+    }
+  }
+}
+
+.span_num {
+  font-size: 22px;
+}
+
+.event_summary_div {
+  float: left;
+  margin-left: 50px;
+  height: 58px;
+}
+.event_summary_div2 {
+  float: left;
+  margin-left: 10px;
+  height: 58px;
+}
+.event_span_div {
+  position: relative;
+  left: 35px;
+  top: -28px;
+}
+
+#home_page_div span {
+  font-size: 14px;
+}
